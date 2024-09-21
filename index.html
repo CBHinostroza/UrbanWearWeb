@@ -1,202 +1,367 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UrbanWear</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <!--<img src="/images/logo.png" alt="Logo de la Tienda" />-->
-        <p>UrbanWear</p>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#products">Productos</a></li>
-          <li><a href="#featured">Destacados</a></li>
-          <li><a href="#offers">Ofertas</a></li>
-          <li><a href="#about-us">Sobre Nosotros</a></li>
-          <li><a href="#testimonials">Testimonios</a></li>
-          <li><a href="#cart">Carrito</a></li>
-          <li><a href="#login">Iniciar Sesión</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <div class="hero">
-      <h1>Explora la Moda Urbana</h1>
-      <p>Descubre los mejores productos a precios increíbles</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanWear</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <!--<img src="/images/logo.png" alt="Logo de la Tienda" />-->
+      <p>UrbanWear</p>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#products">Productos</a></li>
+        <li><a href="#featured">Destacados</a></li>
+        <li><a href="#offers">Ofertas</a></li>
+        <li><a href="#about-us">Sobre Nosotros</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+        <li><a href="#" id="cart-btn">Carrito</a></li>
+        <li><a href="#login">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="products">
-      <h2>Productos</h2>
-      <div class="products">
-        <!-- Ejemplo de producto -->
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas" />
-          <h3>Producto 1</h3>
-          <p>S/. 100.00</p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
-        </div>
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas"" />
-          <h3>Producto 2</h3>
-          <p>S/. 150.00</p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
-        </div>
-        <!-- Repite más productos -->
-        <!-- Simula hasta 20 productos -->
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas"" />
-          <h3>Producto 3</h3>
-          <p>S/. 200.00</p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
-        </div>
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas"" />
-          <h3>Producto 4</h3>
-          <p>S/. 180.00</p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
-        </div>
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas"" />
-          <h3>Producto 5</h3>
-          <p>S/. 220.00</p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
-        </div>
+  <div class="hero">
+    <h1>Explora la Moda Urbana</h1>
+    <p>Descubre los mejores productos a precios increíbles</p>
+  </div>
+
+  <section id="products">
+    <h2>Productos</h2>
+    <div class="products"></div>
+  </section>
+
+  <section id="featured">
+    <h2>Productos Destacados</h2>
+    <div class="featured-products"></div>
+  </section>
+
+  <section id="offers">
+    <h2>Ofertas Especiales</h2>
+    <div class="offers"></div>
+  </section>
+
+
+  <section class="quienes-somos" id="about-us">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      Una tienda de ropa moderna y asequible que ofrece una amplia gama de
+      moda casual y urbana para hombres y mujeres, enfocada en tendencias
+      actuales y básicos atemporales. La tienda destaca por su variedad de
+      estilos para diferentes ocasiones, desde atuendos casuales hasta ropa de
+      oficina y ropa deportiva.
+    </p>
+  </section>
+
+  <section class="testimonios" id="testimonials">
+    <h2>Testimonios</h2>
+    <p>
+      <strong>Cliente 1:</strong>"Excelente servicio y productos de calidad."
+    </p>
+    <p>
+      <strong>Cliente 2:</strong>"Me encantó la atención al cliente, muy
+      recomendados."
+    </p>
+  </section>
+
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <section class="footer__content">
+      <div class="footer__info">
+        <address class="footer__address">
+          <p>Av. Tomas Marsano #456, Lima, Perú</p>
+          <p>+51 924 005 627</p>
+          <p>informacion@urbanwear.com.pe</p>
+          <p>&copy; 2024 UrbanWear. Todos los derechos reservados.</p>
+        </address>
+      </div>
+
+      <div class="footer__links">
+        <ul class="footer__links-list">
+          <li class="footer__links-item">
+            <a href="#">Políticas de Privacidad</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="#">Términos de Servicio</a>
+          </li>
+          <li class="footer__links-item"><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__social-media">
+        <ul class="social-media__list">
+          <li class="social-media__item">
+            <a href="https://www.facebook.com" target="_blank" class="social-media__link" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a href="https://www.instagram.com" target="_blank" class="social-media__link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a href="https://www.pinterest.com" target="_blank" class="social-media__link" aria-label="Pinterest">
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
+  </footer>
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Carrito de Compras</h1>
+      <div class="cart-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Subtotal</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Producto 1 -->
+            <tr>
+              <td class="product-image">
+                <img src="producto1.jpg" alt="Producto 1" />
+              </td>
+              <td class="product-name">Producto 1</td>
+              <td><input type="number" value="2" min="1" /></td>
+              <td>S/. 100.00</td>
+              <td>S/. 200.00</td>
+              <td><button class="btn btn-secondary">Eliminar</button></td>
+            </tr>
+            <!-- Producto 2 -->
+            <tr>
+              <td class="product-image">
+                <img src="producto2.jpg" alt="Producto 2" />
+              </td>
+              <td class="product-name">Producto 2</td>
+              <td><input type="number" value="1" min="1" /></td>
+              <td>S/. 150.00</td>
+              <td>S/. 150.00</td>
+              <td><button class="btn btn-secondary">Eliminar</button></td>
+            </tr>
+            <!-- Producto 3 -->
+            <tr>
+              <td class="product-image">
+                <img src="producto3.jpg" alt="Producto 3" />
+              </td>
+              <td class="product-name">Producto 3</td>
+              <td><input type="number" value="3" min="1" /></td>
+              <td>S/. 80.00</td>
+              <td>S/. 240.00</td>
+              <td><button class="btn btn-secondary">Eliminar</button></td>
+            </tr>
+          </tbody>
+        </table>
 
-    <section id="featured">
-      <h2>Productos Destacados</h2>
-      <div class="featured-products">
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas" />
-          <h3>Producto Destacado 1</h3>
-          <p>S/. 250.00</p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
-        </div>
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas" />
-          <h3>Producto Destacado 2</h3>
-          <p>S/. 300.00</p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
+        <div class="cart-summary">
+          <h3>Resumen del Pedido</h3>
+          <div class="summary-item">
+            <span>Subtotal:</span>
+            <span>S/. 590.00</span>
+          </div>
+          <div class="summary-item">
+            <span>Envío:</span>
+            <span>S/. 20.00</span>
+          </div>
+          <div class="summary-item">
+            <strong>Total:</strong>
+            <strong>S/. 610.00</strong>
+          </div>
+          <button class="btn">Proceder al Pago</button>
+          <button class="btn btn-secondary">Seguir Comprando</button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <section id="offers">
-      <h2>Ofertas Especiales</h2>
-      <div class="offers">
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas" />
-          <h3>Producto en Oferta 1</h3>
-          <p>
-            Antes: S/. 350.00 <br />
-            Ahora: S/. 299.00
-          </p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
-        </div>
-        <div class="product-item">
-          <img src="images/ConjuntoBlanco.png" alt="Conjunto Blanco Adidas" />
-          <h3>Producto en Oferta 2</h3>
-          <p>
-            Antes: S/. 400.00 <br />
-            Ahora: S/. 349.00
-          </p>
-          <a href="detalleproducto.html" class="btn">Comprar Ahora</a>
-        </div>
-      </div>
-    </section>
 
-    <section class="quienes-somos" id="about-us">
-      <h2>Sobre Nosotros</h2>
-      <p>
-        Una tienda de ropa moderna y asequible que ofrece una amplia gama de
-        moda casual y urbana para hombres y mujeres, enfocada en tendencias
-        actuales y básicos atemporales. La tienda destaca por su variedad de
-        estilos para diferentes ocasiones, desde atuendos casuales hasta ropa de
-        oficina y ropa deportiva.
-      </p>
-    </section>
+  <script>
+    const cartBtn = document.getElementById('cart-btn');
+    const modal = document.getElementById('cartModal');
+    const closeModal = document.querySelector('.close');
+    const cartTableBody = document.querySelector('.cart-container tbody');
+    const cartSummary = document.querySelector('.cart-summary');
 
-    <section class="testimonios" id="testimonials">
-      <h2>Testimonios</h2>
-      <p>
-        <strong>Cliente 1:</strong>"Excelente servicio y productos de calidad."
-      </p>
-      <p>
-        <strong>Cliente 2:</strong>"Me encantó la atención al cliente, muy
-        recomendados."
-      </p>
-    </section>
+    let cartItems = [];
 
-    <!-- Pie de Página -->
-    <footer class="footer">
-      <section class="footer__content">
-        <div class="footer__info">
-          <address class="footer__address">
-            <p>Av. Tomas Marsano #456, Lima, Perú</p>
-            <p>+51 924 005 627</p>
-            <p>informacion@urbanwear.com.pe</p>
-            <p>&copy; 2024 UrbanWear. Todos los derechos reservados.</p>
-          </address>
-        </div>
+    const products = [
+      { id: 1, name: 'Sudadera Cool', price: 100, image: 'images/ConjuntoBlanco.png', featured: true, specialOffer: false },
+      { id: 2, name: 'Zapatillas Trendy', price: 150, image: 'images/ConjuntoBlanco.png', featured: false, specialOffer: true },
+      { id: 3, name: 'Gorra Estilosa', price: 200, image: 'images/ConjuntoBlanco.png', featured: false, specialOffer: false },
+      { id: 4, name: 'Chaqueta Moderna', price: 180, image: 'images/ConjuntoBlanco.png', featured: true, specialOffer: false },
+      { id: 5, name: 'Camiseta Básica', price: 220, image: 'images/ConjuntoBlanco.png', featured: false, specialOffer: false },
+      { id: 7, name: 'Zapatos Formales', price: 300, image: 'images/ConjuntoBlanco.png', featured: true, specialOffer: true },
+      { id: 8, name: 'Cinturón Clásico', price: 299, image: 'images/ConjuntoBlanco.png', featured: false, specialOffer: true },
+      { id: 9, name: 'Bufanda Suave', price: 349, image: 'images/ConjuntoBlanco.png', featured: false, specialOffer: false },
+      { id: 10, name: 'Reloj Deportivo', price: 400, image: 'images/ConjuntoBlanco.png', featured: false, specialOffer: false },
+    ];
 
-        <div class="footer__links">
-          <ul class="footer__links-list">
-            <li class="footer__links-item">
-              <a href="#">Políticas de Privacidad</a>
-            </li>
-            <li class="footer__links-item">
-              <a href="#">Términos de Servicio</a>
-            </li>
-            <li class="footer__links-item"><a href="#">FAQ</a></li>
-          </ul>
-        </div>
+    function displayProducts() {
+      const productContainer = document.querySelector('.products');
+      const featuredContainer = document.querySelector('.featured-products');
+      const offersContainer = document.querySelector('.offers');
 
-        <div class="footer__social-media">
-          <ul class="social-media__list">
-            <li class="social-media__item">
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                class="social-media__link"
-                aria-label="Facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                class="social-media__link"
-                aria-label="Instagram"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a
-                href="https://www.pinterest.com"
-                target="_blank"
-                class="social-media__link"
-                aria-label="Pinterest"
-              >
-                <i class="fab fa-pinterest-p"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </footer>
-  </body>
+      products.forEach(product => {
+        const productHtml = `
+  <div class="product-item">
+    <img src="${product.image}" alt="${product.name}" />
+    <h3>${product.name}</h3>
+    <p>S/. ${product.price.toFixed(2)}</p>
+    <div class="product-footer">
+      <a href="javascript:void(0);" class="btn" onclick="addToCart({id: ${product.id}, name: '${product.name}', price: ${product.price}, image: '${product.image}', quantity: 1 })">
+        <i class="fas fa-shopping-cart"></i> Comprar Ahora
+      </a>
+    </div>
+  </div>`;
+
+
+        productContainer.appendChild(createElementFromHTML(productHtml));
+
+        if (product.featured) {
+          featuredContainer.appendChild(createElementFromHTML(productHtml));
+        }
+
+        if (product.specialOffer) {
+          offersContainer.appendChild(createElementFromHTML(productHtml));
+        }
+      });
+    }
+
+    function createElementFromHTML(htmlString) {
+      const div = document.createElement('div');
+      div.innerHTML = htmlString.trim();
+      return div.firstChild;
+    }
+
+    window.onload = function () {
+      displayProducts();
+      loadCartFromLocalStorage();  
+      displayProducts();  
+      updateCart();
+    };
+
+
+
+
+
+
+    cartBtn.onclick = function () {
+      modal.style.display = "block";
+      updateCart();
+    }
+
+    closeModal.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function addToCart(product) {
+      const existingProduct = cartItems.find(item => item.id === product.id);
+      if (existingProduct) {
+        existingProduct.quantity++;
+      } else {
+        cartItems.push(product);
+      }
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCart();
+    }
+
+    function removeFromCart(productId) {
+      cartItems = cartItems.filter(item => item.id !== productId);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCart();
+    }
+
+    function loadCartFromLocalStorage() {
+      const storedCart = localStorage.getItem('cartItems');
+      if (storedCart) {
+        cartItems = JSON.parse(storedCart);
+      }
+    }
+
+    function updateCart() {
+      cartTableBody.innerHTML = '';
+      let subtotal = 0;
+
+      cartItems.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+      <td class="product-image"><img style="height:40px;" src="${item.image}" alt="${item.name}" /></td>
+      <td class="product-name">${item.name}</td>
+      <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)" /></td>
+      <td>S/. ${item.price.toFixed(2)}</td>
+      <td>S/. ${(item.price * item.quantity).toFixed(2)}</td>
+      <td>
+        <button class="btn btn-secondary" onclick="removeFromCart(${item.id})">Eliminar</button>
+        <button class="btn" onclick="openProductDetail(${item.id})">Detalles</button>
+      </td>
+    `;
+        cartTableBody.appendChild(row);
+        subtotal += item.price * item.quantity;
+      });
+
+
+      const shipping = 20;
+      const total = subtotal + shipping;
+
+      cartSummary.innerHTML = `
+    <h3>Resumen del Pedido</h3>
+    <div class="summary-item"><span>Subtotal:</span><span>S/. ${subtotal.toFixed(2)}</span></div>
+    <div class="summary-item"><span>Envío:</span><span>S/. ${shipping.toFixed(2)}</span></div>
+    <div class="summary-item"><strong>Total:</strong><strong>S/. ${total.toFixed(2)}</strong></div>
+    <button class="btn">Proceder al Pago</button>
+    <button class="btn btn-secondary" onclick="modal.style.display='none'">Seguir Comprando</button>
+  `;
+    }
+
+    function openProductDetail(productId) {
+      const product = products.find(p => p.id === productId);
+      if (product) {
+        const params = new URLSearchParams({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          image: product.image
+        });
+        // window.open('detalleproducto.html?' + params.toString());
+        //localStorage.setItem('cartItems', JSON.stringify(product));
+        window.location.href = 'detalleproducto.html?' + params.toString();
+      }
+    }
+
+
+    function updateQuantity(productId, quantity) {
+      const product = cartItems.find(item => item.id === productId);
+      if (product) {
+        product.quantity = parseInt(quantity);
+        updateCart();
+      }
+    }
+
+
+  </script>
+</body>
+
 </html>

@@ -1,133 +1,291 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detalle del Producto</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      .product-detail {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 20px;
-        justify-content: center;
-      }
-      .product-image {
-        width: 50%;
-        text-align: center;
-      }
-      .product-image img {
-        width: 80%;
-        max-width: 400px;
-        border: 1px solid #ddd;
-      }
-      .product-info {
-        width: 40%;
-        padding: 20px;
-      }
-      .product-info h2 {
-        margin-top: 0;
-      }
-      .price {
-        font-size: 24px;
-        color: #e74c3c;
-        margin: 10px 0;
-      }
-      .description {
-        font-size: 16px;
-        color: #555;
-      }
-      .quantity {
-        margin: 20px 0;
-      }
-      .quantity input {
-        width: 50px;
-        padding: 5px;
-        font-size: 16px;
-        text-align: center;
-      }
-      .add-to-cart {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        margin: 10px 0;
-      }
-      .add-to-cart:hover {
-        background-color: #218838;
-      }
-      .reviews {
-        margin-top: 40px;
-      }
-      .reviews h3 {
-        margin-bottom: 10px;
-      }
-      .review-item {
-        border-top: 1px solid #ddd;
-        padding: 10px 0;
-      }
-      .review-item:first-of-type {
-        border-top: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="product-detail">
-      <!-- Imagen del producto -->
-      <div class="product-image">
-        <img src="producto1.jpg" alt="Producto 1" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanWear</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <!--<img src="/images/logo.png" alt="Logo de la Tienda" />-->
+      <p>UrbanWear</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html#home">Inicio</a></li>
+        <li><a href="index.html#products">Productos</a></li>
+        <li><a href="index.html#featured">Destacados</a></li>
+        <li><a href="index.html#offers">Ofertas</a></li>
+        <li><a href="index.html#about-us">Sobre Nosotros</a></li>
+        <li><a href="index.html#testimonials">Testimonios</a></li>
+        <li><a href="#" id="cart-btn">Carrito</a></li>
+        <li><a href="#login">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="product-detail">
+    <div class="product-image">
+      <img src="producto1.jpg" alt="Producto 1" />
+    </div>
+    <div class="product-info">
+      <h1>Producto 1</h1>
+      <p class="price">S/. 100.00</p>
+      <p class="description">
+        Este es un producto de alta calidad, ideal para el uso diario. Está
+        fabricado con los mejores materiales, asegurando durabilidad y
+        rendimiento superior.
+      </p>
+      <div class="quantity">
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" />
       </div>
+      <button class="add-to-cart">Añadir al Carrito</button>
+    </div>
+  </div>
 
-      <!-- Información del producto -->
-      <div class="product-info">
-        <h2>Producto 1</h2>
-        <p class="price">S/. 100.00</p>
-        <p class="description">
-          Este es un producto de alta calidad, ideal para el uso diario. Está
-          fabricado con los mejores materiales, asegurando durabilidad y
-          rendimiento superior.
-        </p>
 
-        <!-- Selector de cantidad y botón de añadir al carrito -->
-        <div class="quantity">
-          <label for="quantity">Cantidad:</label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            min="1"
-            max="10"
-            value="1"
-          />
+  <div class="reviews">
+    <h3>Opiniones de Clientes</h3>
+    <div class="review-item">
+      <div class="review-header">
+        <div>
+          <p class="user-name"><strong> CHIBOLIN </strong></p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
         </div>
-        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <p class="review-text">"¡Me encantó este producto! Excelente calidad y precio."</p>
+    </div>
+    <div class="review-item">
+      <div class="review-header">
+        <div>
+          <p class="user-name"><strong>MENGANO</strong></p>
+          <p class="rating">⭐⭐⭐⭐</p>
+        </div>
+      </div>
+      <p class="review-text">"Buen producto, aunque podría mejorar en algunos detalles."</p>
+    </div>
+    <div class="review-item">
+      <div class="review-header">
+        <div>
+          <p class="user-name"><strong>FULANO</strong></p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
+        </div>
+      </div>
+      <p class="review-text">"Muy satisfecho con la compra. ¡Lo recomiendo!"</p>
+    </div>
+  </div>
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Carrito de Compras</h1>
+      <div class="cart-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Subtotal</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Producto 1 -->
+            <tr>
+              <td class="product-image">
+                <img src="producto1.jpg" alt="Producto 1" />
+              </td>
+              <td class="product-name">Producto 1</td>
+              <td><input type="number" value="2" min="1" /></td>
+              <td>S/. 100.00</td>
+              <td>S/. 200.00</td>
+              <td><button class="btn btn-secondary">Eliminar</button></td>
+            </tr>
+            <!-- Producto 2 -->
+            <tr>
+              <td class="product-image">
+                <img src="producto2.jpg" alt="Producto 2" />
+              </td>
+              <td class="product-name">Producto 2</td>
+              <td><input type="number" value="1" min="1" /></td>
+              <td>S/. 150.00</td>
+              <td>S/. 150.00</td>
+              <td><button class="btn btn-secondary">Eliminar</button></td>
+            </tr>
+            <!-- Producto 3 -->
+            <tr>
+              <td class="product-image">
+                <img src="producto3.jpg" alt="Producto 3" />
+              </td>
+              <td class="product-name">Producto 3</td>
+              <td><input type="number" value="3" min="1" /></td>
+              <td>S/. 80.00</td>
+              <td>S/. 240.00</td>
+              <td><button class="btn btn-secondary">Eliminar</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cart-summary">
+          <h3>Resumen del Pedido</h3>
+          <div class="summary-item">
+            <span>Subtotal:</span>
+            <span>S/. 590.00</span>
+          </div>
+          <div class="summary-item">
+            <span>Envío:</span>
+            <span>S/. 20.00</span>
+          </div>
+          <div class="summary-item">
+            <strong>Total:</strong>
+            <strong>S/. 610.00</strong>
+          </div>
+          <button class="btn">Proceder al Pago</button>
+          <button class="btn btn-secondary">Seguir Comprando</button>
+        </div>
       </div>
     </div>
+  </div>
+  <script>
+    const cartBtn = document.getElementById('cart-btn');
+    const modal = document.getElementById('cartModal');
+    const closeModal = document.querySelector('.close');
+    const cartTableBody = document.querySelector('.cart-container tbody');
+    const cartSummary = document.querySelector('.cart-summary');
 
-    <!-- Sección de opiniones -->
-    <div class="reviews">
-      <h3>Opiniones de Clientes</h3>
+    let cartItems = []; 
 
-      <div class="review-item">
-        <p><strong>Cliente 1</strong> - 5 estrellas</p>
-        <p>"¡Me encantó este producto! Excelente calidad y precio."</p>
-      </div>
 
-      <div class="review-item">
-        <p><strong>Cliente 2</strong> - 4 estrellas</p>
-        <p>"Buen producto, aunque podría mejorar en algunos detalles."</p>
-      </div>
+    cartBtn.onclick = function () {
+      modal.style.display = "block";
+      updateCart();
+    }
 
-      <div class="review-item">
-        <p><strong>Cliente 3</strong> - 5 estrellas</p>
-        <p>"Muy satisfecho con la compra. ¡Lo recomiendo!"</p>
-      </div>
-    </div>
-  </body>
+    closeModal.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function addToCart(product) {
+      const existingProduct = cartItems.find(item => item.id === product.id);
+      if (existingProduct) {
+        existingProduct.quantity++;
+      } else {
+        cartItems.push(product);
+      }
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCart();
+    }
+
+    function removeFromCart(productId) {
+      cartItems = cartItems.filter(item => item.id !== productId);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCart();
+    }
+
+    function loadCartFromLocalStorage() {
+      const storedCart = localStorage.getItem('cartItems');
+      if (storedCart) {
+        cartItems = JSON.parse(storedCart);
+      }
+    }
+
+    function updateCart() {
+      cartTableBody.innerHTML = '';
+      let subtotal = 0;
+
+      cartItems.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+      <td class="product-image"><img style="height:40px;" src="${item.image}" alt="${item.name}" /></td>
+      <td class="product-name">${item.name}</td>
+      <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)" /></td>
+      <td>S/. ${item.price.toFixed(2)}</td>
+      <td>S/. ${(item.price * item.quantity).toFixed(2)}</td>
+      <td>
+        <button class="btn btn-secondary" onclick="removeFromCart(${item.id})">Eliminar</button>
+        <button class="btn" onclick="openProductDetail(${item.id})">Detalles</button>
+      </td>
+    `;
+        cartTableBody.appendChild(row);
+        subtotal += item.price * item.quantity;
+      });
+
+
+      const shipping = 20;
+      const total = subtotal + shipping;
+
+      cartSummary.innerHTML = `
+    <h3>Resumen del Pedido</h3>
+    <div class="summary-item"><span>Subtotal:</span><span>S/. ${subtotal.toFixed(2)}</span></div>
+    <div class="summary-item"><span>Envío:</span><span>S/. ${shipping.toFixed(2)}</span></div>
+    <div class="summary-item"><strong>Total:</strong><strong>S/. ${total.toFixed(2)}</strong></div>
+    <button class="btn">Proceder al Pago</button>
+    <button class="btn btn-secondary" onclick="modal.style.display='none'">Seguir Comprando</button>
+  `;
+    }
+
+    function openProductDetail(productId) {
+      const product = products.find(p => p.id === productId);
+      if (product) {
+        const params = new URLSearchParams({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          image: product.image
+        });
+        window.open('detalleproducto.html?' + params.toString(), '_blank');
+      }
+    }
+
+
+    function updateQuantity(productId, quantity) {
+      const product = cartItems.find(item => item.id === productId);
+      if (product) {
+        product.quantity = parseInt(quantity);
+        updateCart();
+      }
+    }
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        id: params.get('id'),
+        name: params.get('name'),
+        price: params.get('price'),
+        image: params.get('image')
+      };
+    }
+
+    function displayProductDetail() {
+      const product = getQueryParams();
+
+      if (product.name) {
+        document.querySelector('.product-image img').src = product.image;
+        document.querySelector('.product-image img').alt = product.name;
+        document.querySelector('.product-info h1').textContent = product.name;
+        document.querySelector('.price').textContent = `S/. ${parseFloat(product.price).toFixed(2)}`;
+        // Puedes añadir una descripción aquí si lo deseas
+      }
+    }
+ 
+    window.onload = function () {
+      loadCartFromLocalStorage();   
+      displayProductDetail();
+      updateCart();
+    };
+  </script>
+
+</body>
+
 </html>
