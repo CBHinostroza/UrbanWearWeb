@@ -185,16 +185,16 @@
 
       products.forEach(product => {
         const productHtml = `
-  <div class="product-item">
-    <img src="${product.image}" alt="${product.name}" />
-    <h3>${product.name}</h3>
-    <p>S/. ${product.price.toFixed(2)}</p>
-    <div class="product-footer">
-      <a href="javascript:void(0);" class="btn" onclick="addToCart({id: ${product.id}, name: '${product.name}', price: ${product.price}, image: '${product.image}', quantity: 1 })">
-        <i class="fas fa-shopping-cart"></i> Comprar Ahora
-      </a>
-    </div>
-  </div>`;
+            <div class="product-item">
+              <img src="${product.image}" alt="${product.name}" />
+              <h3>${product.name}</h3>
+              <p>S/. ${product.price.toFixed(2)}</p>
+              <div class="product-footer">
+                <a href="javascript:void(0);" class="btn" onclick="addToCart({id: ${product.id}, name: '${product.name}', price: ${product.price}, image: '${product.image}', quantity: 1 })">
+                  <i class="fas fa-shopping-cart"></i> Comprar Ahora
+                </a>
+              </div>
+            </div>`;
 
 
         productContainer.appendChild(createElementFromHTML(productHtml));
@@ -215,8 +215,7 @@
       return div.firstChild;
     }
 
-    window.onload = function () {
-      displayProducts();
+    window.onload = function () { 
       loadCartFromLocalStorage();  
       displayProducts();  
       updateCart();
