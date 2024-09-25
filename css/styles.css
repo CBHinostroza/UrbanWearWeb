@@ -533,11 +533,19 @@ footer a:hover {
 }
 
 .subscribe__input {
+  background-color: #fff;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
   width: 300px;
+}
+
+/* Cambiar color de fondo y borde al hacer clic */
+.subscribe__input:focus {
+  background-color: #fff; /* Color de fondo cuando está enfocado */
+  border-color: #58965b; /* Color del borde cuando está enfocado */
+  outline: none; /* Eliminar el contorno por defecto */
 }
 
 .subscribe__btn {

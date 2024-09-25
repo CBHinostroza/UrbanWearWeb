@@ -141,13 +141,11 @@ function displayProducts() {
               <h3>${product.name}</h3>
               <p>S/. ${product.price.toFixed(2)}</p>
               <div class="product-footer">
-                <a href="javascript:void(0);" class="btn" onclick="addToCart({id: ${
-                  product.id
-                }, name: '${product.name}', price: ${product.price}, image: '${
-      product.image
-    }', quantity: 1 })">
-                  <i class="fas fa-shopping-cart"></i> Comprar Ahora
-                </a>
+<a class="btn" onclick="addToCart({id: ${product.id}, name: '${
+      product.name
+    }', price: ${product.price}, image: '${product.image}', quantity: 1 })">
+  <i class="fas fa-shopping-cart"></i> Comprar Ahora
+</a>
               </div>
             </div>`;
 
@@ -191,6 +189,15 @@ window.onclick = function (event) {
 };
 
 function addToCart(product) {
+  // Mostrar el mensaje de notificación
+  const notification = document.getElementById("notification");
+  notification.style.display = "block";
+
+  // Ocultar el mensaje después de 2 segundos
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 2000);
+
   const existingProduct = cartItems.find((item) => item.id === product.id);
   if (existingProduct) {
     existingProduct.quantity++;
