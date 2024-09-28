@@ -106,8 +106,8 @@ h2 {
   padding: 40px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin: 40px 200px;
-  padding: 20px 200px;
+  padding: 20px 20px;
+  margin: 20px 400px;
 }
 
 .testimonials h2 {
@@ -145,7 +145,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px 0;
+  margin: 20px 200px;
 }
 
 .product-item {
@@ -294,142 +294,6 @@ h2 {
   margin-top: 20px;
   border-top: 1px solid #ddd;
   padding-top: 10px;
-}
-
-.product-detail {
-  display: flex;
-  margin: 20px;
-  border: 1px solid #e1e1e1;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-  flex: 1;
-  max-width: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.product-image img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.product-image img:hover {
-  transform: scale(1.05);
-}
-
-.product-info {
-  flex: 2;
-  padding-left: 30px;
-}
-
-.product-info h1 {
-  font-size: 28px;
-  margin: 10px 0;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-}
-
-.price {
-  font-size: 24px;
-  color: #c0392b;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.description {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.5;
-}
-
-.quantity {
-  margin: 15px 0;
-}
-
-.quantity label {
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.add-to-cart {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.add-to-cart:hover {
-  background-color: #45a049;
-}
-
-.reviews {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #e1e1e1;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.reviews h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 10px;
-}
-
-.review-item {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #f1f1f1;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.3s ease;
-}
-
-.review-item:hover {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.review-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.user-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.user-name {
-  font-weight: bold;
-  color: #333;
-}
-
-.rating {
-  color: #f39c12;
-  font-size: 16px;
-}
-
-.review-text {
-  color: #555;
-  font-style: italic;
 }
 
 /*Inicio Sección Suscribete*/
