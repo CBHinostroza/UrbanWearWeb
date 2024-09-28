@@ -144,7 +144,7 @@ function displayProducts() {
 <a class="btn" onclick="addToCart({id: ${product.id}, name: '${
       product.name
     }', price: ${product.price}, image: '${product.image}', quantity: 1 })">
-  <i class="fas fa-shopping-cart"></i> Comprar Ahora
+   Previsualizar
 </a>
               </div>
             </div>`;
