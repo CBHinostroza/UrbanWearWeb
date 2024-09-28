@@ -1,0 +1,14 @@
+.quienes-somos {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px 200px;
+    padding: 20px 200px;
+}
+
+.quienes-somos p {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+}

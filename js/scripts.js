@@ -149,13 +149,15 @@ function displayProducts() {
               </div>
             </div>`;
 
-    productContainer.appendChild(createElementFromHTML(productHtml));
+    if (productContainer != null) {
+      productContainer.appendChild(createElementFromHTML(productHtml));
+    }
 
-    if (product.featured) {
+    if (featuredContainer != null && product.featured) {
       featuredContainer.appendChild(createElementFromHTML(productHtml));
     }
 
-    if (product.specialOffer) {
+    if (offersContainer != null && product.specialOffer) {
       offersContainer.appendChild(createElementFromHTML(productHtml));
     }
   });

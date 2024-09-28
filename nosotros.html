@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detalle Producto</title>
+    <title>Nosotros</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesNosotros.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
+
   <body>
     <header>
       <div class="logo">
@@ -26,69 +28,38 @@
         </ul>
       </nav>
     </header>
-    <div class="product-detail">
-      <div class="product-image">
-        <img src="/images/ConjuntoBlanco.png" alt="Producto 1" />
-      </div>
-      <div class="product-info">
-        <h1>Producto 1</h1>
-        <p class="price">S/. 100.00</p>
-        <p class="description">
-          Este es un producto de alta calidad, ideal para el uso diario. Está
-          fabricado con los mejores materiales, asegurando durabilidad y
-          rendimiento superior.
-        </p>
-        <div class="quantity">
-          <label for="quantity">Cantidad:</label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            min="1"
-            max="10"
-            value="1"
-          />
-        </div>
-        <button class="add-to-cart">Añadir al Carrito</button>
-      </div>
-    </div>
 
-    <div class="reviews">
-      <h3>Opiniones de Clientes</h3>
-      <div class="review-item">
-        <div class="review-header">
-          <div>
-            <p class="user-name"><strong> Felipe Fernandez </strong></p>
-            <p class="rating">⭐⭐⭐⭐⭐</p>
-          </div>
-        </div>
-        <p class="review-text">
-          "¡Me encantó este producto! Excelente calidad y precio."
-        </p>
-      </div>
-      <div class="review-item">
-        <div class="review-header">
-          <div>
-            <p class="user-name"><strong>Jose Rivera</strong></p>
-            <p class="rating">⭐⭐⭐⭐</p>
-          </div>
-        </div>
-        <p class="review-text">
-          "Buen producto, aunque podría mejorar en algunos detalles."
-        </p>
-      </div>
-      <div class="review-item">
-        <div class="review-header">
-          <div>
-            <p class="user-name"><strong>Fernanda Espejo</strong></p>
-            <p class="rating">⭐⭐⭐⭐⭐</p>
-          </div>
-        </div>
-        <p class="review-text">
-          "Muy satisfecha con la compra. ¡Lo recomiendo!"
-        </p>
-      </div>
-    </div>
+    <section class="quienes-somos" id="about-us">
+      <h2>Nosotros</h2>
+      <p>
+        Una tienda de ropa moderna y asequible que ofrece una amplia gama de
+        moda casual y urbana para hombres y mujeres, enfocada en tendencias
+        actuales y básicos atemporales. La tienda destaca por su variedad de
+        estilos para diferentes ocasiones, desde atuendos casuales hasta ropa de
+        oficina y ropa deportiva.
+      </p>
+      <h2>Misión</h2>
+      <p>
+        Nuestra misión es crear joyas que reflejen los momentos más especiales
+        en la vida de nuestros clientes, con un enfoque en la calidad artesanal
+        y la personalización. Ofrecemos piezas que transmiten emociones
+        duraderas, utilizando materiales de primera calidad y cuidando cada
+        detalle para garantizar la satisfacción y hacer que cada cliente se
+        sienta único y especial.
+      </p>
+      <h2>Visión</h2>
+      <p>
+        Nuestra visión es ser la marca global de referencia en joyería de alta
+        gama para bodas y compromisos, destacando por nuestra artesanía,
+        originalidad y personalización. Queremos que nuestras piezas cuenten
+        historias únicas y significativas, siendo parte de momentos inolvidables
+        y creando joyas que trasciendan el tiempo como símbolos de amor,
+        elegancia y emociones profundas.
+      </p>
+      <h2>Valores</h2>
+      <p>Exclusividad, Elegancia, Innovación y Emoción.</p>
+    </section>
+
     <!-- Pie de Página -->
     <footer class="footer">
       <section class="footer__content">
@@ -190,6 +161,23 @@
           </div>
         </div>
       </div>
+    </div>
+    <div
+      id="notification"
+      style="
+        font-size: 14px;
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #555;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      "
+    >
+      Producto agregado al carrito
     </div>
     <script src="/js/scripts.js"></script>
   </body>

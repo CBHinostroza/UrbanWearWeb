@@ -52,6 +52,12 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
+.logo p {
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 20px;
+}
+
 .hero {
   position: relative;
   /* Para que ::before esté posicionado correctamente */
@@ -89,9 +95,48 @@ nav ul li a:hover {
 h2 {
   color: #222;
   text-align: center;
-  margin: 30px 0;
   font-size: 2rem;
+  margin-top: 20px;
 }
+
+
+/* Inicio Sección de Testimonios */
+.testimonials {
+  background-color: #fff;
+  padding: 40px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 40px 200px;
+  padding: 20px 200px;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  background-color: #fff;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  color: #666;
+}
+/* Fin Sección de Testimonios */
 
 .products,
 .featured-products,
@@ -140,136 +185,6 @@ h2 {
 
 .product-item p {
   color: #888;
-}
-
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-footer a {
-  color: #f4f4f4;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ddd;
-  text-decoration: underline;
-}
-
-/* Sección de Quiénes Somos */
-.quienes-somos {
-  background-color: #fff;
-  padding: 40px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin: 40px 200px;
-  padding: 20px 200px;
-}
-
-.quienes-somos p {
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Sección de Testimonios */
-.testimonials {
-  background-color: #fff;
-  padding: 40px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin: 40px 200px;
-  padding: 20px 200px;
-}
-
-.testimonials h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.testimonial {
-  background-color: #fff;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.testimonial img {
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  margin-bottom: 20px;
-}
-
-.testimonial blockquote {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.testimonial p {
-  color: #666;
-}
-
-/* Sección de Pie de Página */
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 40px 200px;
-}
-
-.footer__content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer__info p,
-.footer__address p {
-  margin-bottom: 10px;
-}
-
-.footer__links ul {
-  list-style: none;
-}
-
-.footer__links a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer__links a:hover {
-  color: #ff6f61;
-}
-
-.social-media__list {
-  display: flex;
-  gap: 15px;
-}
-
-.social-media__link {
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.social-media__link:hover {
-  color: #ff6f61;
-}
-
-.logo p {
-  font-weight: bold;
-  font-size: 22px;
-  margin-left: 20px;
 }
 
 .btn {
@@ -454,7 +369,6 @@ footer a:hover {
   background-color: #1a5276;
 }
 
-
 .reviews {
   margin: 20px;
   padding: 20px;
@@ -515,6 +429,7 @@ footer a:hover {
   font-style: italic;
 }
 
+/*Inicio Sección Suscribete*/
 .subscribe {
   text-align: center;
   padding: 40px 0;
@@ -541,11 +456,10 @@ footer a:hover {
   width: 300px;
 }
 
-/* Cambiar color de fondo y borde al hacer clic */
 .subscribe__input:focus {
-  background-color: #fff; /* Color de fondo cuando está enfocado */
-  border-color: #58965b; /* Color del borde cuando está enfocado */
-  outline: none; /* Eliminar el contorno por defecto */
+  background-color: #fff;
+  border-color: #45a049;
+  outline: none;
 }
 
 .subscribe__btn {
@@ -560,3 +474,52 @@ footer a:hover {
 .subscribe__btn:hover {
   background-color: #45a049;
 }
+/*Fin Sección Suscribete*/
+
+/* Inicio Sección de Pie de Página */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 200px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__info p,
+.footer__address p {
+  margin-bottom: 10px;
+}
+
+.footer__links ul {
+  list-style: none;
+}
+
+.footer__links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__links a:hover {
+  color: #ff6f61;
+}
+
+.social-media__list {
+  display: flex;
+  gap: 15px;
+}
+
+.social-media__link {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-media__link:hover {
+  color: #ff6f61;
+}
+/* Fin Sección de Pie de Página */
