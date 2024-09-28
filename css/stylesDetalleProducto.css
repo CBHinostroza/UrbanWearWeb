@@ -1,5 +1,6 @@
 .product-detail-container {
-    margin: 20px 400px;
+    width: 60%;
+    margin: 20px auto;
 }
 
 .product-detail {
