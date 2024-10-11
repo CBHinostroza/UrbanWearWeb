@@ -21,7 +21,9 @@
           <li><a href="tienda.html">Tienda</a></li>
           <li><a href="nosotros.html">Sobre Nosotros</a></li>
           <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="#" id="cart-btn">Carrito</a></li>
+          <li style="position: relative;"><a href="#" id="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+            <div class="badge"></div>
+          </li>
           <li><a href="#login">Iniciar Sesión</a></li>
         </ul>
       </nav>
@@ -184,6 +186,19 @@
       "
     >
       Producto agregado al carrito
+    </div>
+    <div id="loginModal" class="modal-session">
+      <div class="modal-content">
+        <span class="close-login">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+          <label for="username">Usuario:</label>
+          <input type="text" id="username" name="username" required />
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit" class="btn">Ingresar</button>
+        </form>
+      </div>
     </div>
     <script src="/js/scripts.js"></script>
   </body>

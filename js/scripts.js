@@ -3,6 +3,12 @@ const modal = document.getElementById("cartModal");
 const closeModal = document.querySelector(".close");
 const cartTableBody = document.querySelector(".cart-container tbody");
 const cartSummary = document.querySelector(".cart-summary");
+const cartBadge = document.querySelector('.badge');
+const loginBtn = document.querySelector('a[href="#login"]');
+const loginModal = document.getElementById('loginModal');
+const closeLoginModal = document.querySelector('.close-login');
+const loginForm = document.getElementById('loginForm');
+let loggedIn = false;
 
 let cartItems = [];
 
@@ -140,12 +146,13 @@ function displayProducts() {
               <img src="${product.image}" alt="${product.name}" />
               <h3>${product.name}</h3>
               <p>S/. ${product.price.toFixed(2)}</p>
-              <div class="product-footer">
-<a class="btn" onclick="addToCart({id: ${product.id}, name: '${
-      product.name
-    }', price: ${product.price}, image: '${product.image}', quantity: 1 })">
-   Previsualizar
-</a>
+              <div class="product-footer" >
+                <button class="btn" onclick="addToCart({id: ${product.id}, name: '${product.name}', price: ${product.price}, image: '${product.image}', quantity: 1 })">
+                  <i class="fas fa-shopping-cart"></i>
+                </button> 
+                <button class="btn btn-primary" onclick="openProductDetail(${product.id})">
+                  <i class="fas fa-eye"></i>
+                </button>
               </div>
             </div>`;
 
@@ -188,6 +195,9 @@ window.onclick = function (event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
+  if (event.target === loginModal) {
+    loginModal.style.display = "none";
+  }
 };
 
 function addToCart(product) {
@@ -226,6 +236,7 @@ function loadCartFromLocalStorage() {
 function updateCart() {
   cartTableBody.innerHTML = "";
   let subtotal = 0;
+  let totalQuantity = 0;
 
   cartItems.forEach((item) => {
     const row = document.createElement("tr");
@@ -250,7 +261,15 @@ function updateCart() {
     `;
     cartTableBody.appendChild(row);
     subtotal += item.price * item.quantity;
+    totalQuantity += item.quantity;
   });
+
+  if (cartItems.length > 0) {
+    cartBadge.style.display = 'block';
+    cartBadge.textContent = cartItems.length;
+  } else {
+    cartBadge.style.display = 'none';
+  }
 
   const shipping = 20;
   const total = subtotal + shipping;
@@ -266,8 +285,10 @@ function updateCart() {
     <div class="summary-item"><strong>Total: </strong><strong>S/. ${total.toFixed(
       2
     )}</strong></div>
-    <button class="btn">Proceder al Pago</button>
-    <button class="btn btn-secondary" onclick="modal.style.display='none'">Seguir Comprando</button>
+        <div style="display:flex;justify-content: space-between;">
+        <button class="btn">Proceder al Pago</button>
+        <button class="btn btn-secondary" onclick="modal.style.display='none'">Seguir Comprando</button>
+        </div>
   `;
 }
 
@@ -293,3 +314,34 @@ function updateQuantity(productId, quantity) {
     updateCart();
   }
 }
+
+loginForm.onsubmit = function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  if (username === "ADMIN" && password === "ADMIN") {
+    loggedIn = true;
+    loginModal.style.display = "none";
+    loginBtn.innerHTML = '<i class="fas fa-user"></i> ADMIN';
+    loginBtn.href = "javascript:void(0);";
+  } else {
+    alert('Credenciales incorrectas');
+  }
+}
+
+function logout() {
+  loggedIn = false;
+  loginBtn.innerHTML = 'Iniciar Sesión';
+  loginBtn.href = "#login";
+  loginBtn.onclick = null;
+}
+
+loginBtn.onclick = function () {
+  loginModal.style.display = "block";
+}
+
+closeLoginModal.onclick = function () {
+  loginModal.style.display = "none";
+} 
