@@ -212,7 +212,12 @@ function addToCart(product) {
 
   const existingProduct = cartItems.find((item) => item.id === product.id);
   if (existingProduct) {
-    existingProduct.quantity++;
+    if(product.quantity){
+      existingProduct.quantity += product.quantity;
+    }else{
+      existingProduct.quantity++;
+    }
+    
   } else {
     cartItems.push(product);
   }
@@ -315,33 +320,116 @@ function updateQuantity(productId, quantity) {
   }
 }
 
-loginForm.onsubmit = function (e) {
-  e.preventDefault();
+// loginForm.onsubmit = function (e) {
+//   e.preventDefault();
 
+//   const username = document.getElementById('username').value;
+//   const password = document.getElementById('password').value;
+
+//   if (username === "ADMIN" && password === "ADMIN") {
+//     loggedIn = true;
+//     loginModal.style.display = "none";
+//     loginBtn.innerHTML = '<i class="fas fa-user"></i> ADMIN';
+//     loginBtn.href = "javascript:void(0);";
+//   } else {
+//     alert('Credenciales incorrectas');
+//   }
+// }
+
+// function logout() {
+//   loggedIn = false;
+//   loginBtn.innerHTML = 'Iniciar Sesión';
+//   loginBtn.href = "#login";
+//   loginBtn.onclick = null;
+// }
+
+// loginBtn.onclick = function () {
+//   loginModal.style.display = "block";
+// }
+
+// closeLoginModal.onclick = function () {
+//   loginModal.style.display = "none";
+// } 
+
+document.querySelector('a[href="#login"]').addEventListener('click', function () {
+  document.getElementById('loginModal').style.display = 'block';
+});
+
+// Cerrar modal de inicio de sesión
+document.querySelector('.close-login').addEventListener('click', function () {
+  document.getElementById('loginModal').style.display = 'none';
+});
+
+// Validar credenciales de inicio de sesión
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
-  if (username === "ADMIN" && password === "ADMIN") {
-    loggedIn = true;
-    loginModal.style.display = "none";
-    loginBtn.innerHTML = '<i class="fas fa-user"></i> ADMIN';
-    loginBtn.href = "javascript:void(0);";
+  if (username === 'ADMIN' && password === 'ADMIN') {
+      // Guardar el usuario en localStorage
+      localStorage.setItem('user', username);
+
+      // Cambiar el texto de "Iniciar Sesión" por el nombre de usuario
+      actualizarInterfazUsuario(username);
+
+      // Cerrar el modal
+      document.getElementById('loginModal').style.display = 'none';
   } else {
-    alert('Credenciales incorrectas');
+      alert('Credenciales incorrectas');
   }
+});
+
+// Función para actualizar la interfaz al iniciar sesión
+function actualizarInterfazUsuario(username) {
+  const nav = document.querySelector('nav ul');
+  const loginItem = document.querySelector('a[href="#login"]').parentElement;
+
+  // Crear ícono de usuario con el nombre
+  loginItem.innerHTML = `
+  <a href="#" id="user-icon">
+      <i class="fas fa-user"></i> ${username}
+  </a>
+  <ul class="user-menu" style="display: none;">
+      <li>
+          <a id="logout" style="position: absolute; background-color: #dc3545; color: white; padding: 5px 10px; border-radius: 5px; z-index: 1000;cursor:pointer">
+              logout
+          </a>
+      </li>
+  </ul>
+`;
+
+  // Mostrar el menú al hacer clic en el ícono de usuario
+  document.getElementById('user-icon').addEventListener('click', function () {
+      const userMenu = document.querySelector('.user-menu');
+      userMenu.style.display = userMenu.style.display === 'none' ? 'block' : 'none';
+  });
+
+  // Manejar el cierre de sesión
+  document.getElementById('logout').addEventListener('click', function () {
+      localStorage.removeItem('user');
+      //restaurarInterfazLogin();
+      location.reload();
+  });
 }
 
-function logout() {
-  loggedIn = false;
-  loginBtn.innerHTML = 'Iniciar Sesión';
-  loginBtn.href = "#login";
-  loginBtn.onclick = null;
+// Función para restaurar la interfaz al cerrar sesión
+function restaurarInterfazLogin() {
+  const loginItem = document.querySelector('a[href="#login"]').parentElement;
+
+  loginItem.innerHTML = '<a href="#login">Iniciar Sesión</a>';
+
+  // Volver a asignar el evento para abrir el modal
+  document.querySelector('a[href="#login"]').addEventListener('click', function () {
+      document.getElementById('loginModal').style.display = 'block';
+  });
 }
 
-loginBtn.onclick = function () {
-  loginModal.style.display = "block";
-}
+// Verificar si hay un usuario guardado en localStorage al cargar la página
+window.addEventListener('load', function () {
+  const savedUser = localStorage.getItem('user');
+  if (savedUser) {
+      actualizarInterfazUsuario(savedUser);
+  }
+});
 
-closeLoginModal.onclick = function () {
-  loginModal.style.display = "none";
-} 

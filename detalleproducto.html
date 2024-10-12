@@ -46,7 +46,7 @@
             fabricado con los mejores materiales, asegurando durabilidad y
             rendimiento superior.
           </p>
-          <div class="quantity">
+          <div class="quantity-xd">
             <label for="quantity">Cantidad:</label>
             <input
               type="number"
@@ -57,7 +57,6 @@
               value="1"
             />
           </div>
-          <button class="add-to-cart">Comprar Ahora</button>
           <button class="add-to-cart">
             <i class="fas fa-shopping-cart"></i> Agregar al Carrito
           </button>
@@ -204,6 +203,23 @@
         </div>
       </div>
     </div>
+    <div
+      id="notification"
+      style="
+        font-size: 14px;
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #555;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      "
+    >
+      Producto agregado al carrito
+    </div>
     <div id="loginModal" class="modal-session">
       <div class="modal-content">
         <span class="close-login">&times;</span>
@@ -218,5 +234,6 @@
       </div>
     </div>
     <script src="/js/scripts.js"></script>
+    <script src="/js/scripts-detalleproducto.js"></script>
   </body>
 </html>
