@@ -250,7 +250,7 @@ function updateCart() {
         item.image
       }" alt="${item.name}" /></td>
       <td class="product-name">${item.name}</td>
-      <td><input type="number" value="${
+      <td><input style="max-width:50px" type="number" value="${
         item.quantity
       }" min="1" onchange="updateQuantity(${item.id}, this.value)" /></td>
       <td>S/. ${item.price.toFixed(2)}</td>
