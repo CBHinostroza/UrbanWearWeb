@@ -56,10 +56,12 @@ nav ul li a:hover {
 }
  
 
-.logo p {
+.logo-p {
   font-weight: bold;
   font-size: 22px;
   margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .hero {
