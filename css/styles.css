@@ -67,7 +67,7 @@ nav ul li a:hover {
 .hero {
   position: relative;
   /* Para que ::before esté posicionado correctamente */
-  background: url("/images/banner.jpg") center/cover no-repeat;
+  background: url("/images/banner.jpg") center/cover no-repeat !important;
   padding: 100px 20px;
   text-align: center;
   color: #fff;
